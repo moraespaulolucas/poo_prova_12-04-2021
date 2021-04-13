@@ -3,7 +3,7 @@ package br.com.moraespaulolucas.prj_exercicio01.model;
 public class Jogador {
     private int idJogador;
     private String nomeJogador;
-    private String posicao;
+    private Posicao posicao;
     private int numCamisa;
 
     public int getIdJogador() {
@@ -22,11 +22,11 @@ public class Jogador {
         this.nomeJogador = nomeJogador;
     }
 
-    public String getPosicao() {
+    public Posicao getPosicao() {
         return posicao;
     }
 
-    public void setPosicao(String posicao) {
+    public void setPosicao(Posicao posicao) {
         this.posicao = posicao;
     }
 

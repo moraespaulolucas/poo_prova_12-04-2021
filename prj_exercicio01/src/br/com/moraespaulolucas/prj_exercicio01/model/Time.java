@@ -36,9 +36,15 @@ public class Time {
         this.jogadores.add(jogador);
     }
 
+    public void imprimirTime() {
+        System.out.println("Time: "+ this.nomeTime);
+        System.out.println("ID: "+ this.idTime);
+    }
+
     public void listarJogadores() {
         for(Jogador j : this.jogadores) {
             j.imprimirJogador();
+            System.out.println();
         }
     }
 }
