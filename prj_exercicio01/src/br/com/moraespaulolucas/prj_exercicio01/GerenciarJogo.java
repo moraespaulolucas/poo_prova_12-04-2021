@@ -4,8 +4,6 @@ import br.com.moraespaulolucas.prj_exercicio01.model.Jogador;
 import br.com.moraespaulolucas.prj_exercicio01.model.Posicao;
 import br.com.moraespaulolucas.prj_exercicio01.model.Time;
 
-import java.util.Scanner;
-
 public class GerenciarJogo {
 
     public static void main(String[] args) {

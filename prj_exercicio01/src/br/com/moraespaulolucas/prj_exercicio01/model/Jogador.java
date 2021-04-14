@@ -6,32 +6,16 @@ public class Jogador {
     private Posicao posicao;
     private int numCamisa;
 
-    public int getIdJogador() {
-        return idJogador;
-    }
-
     public void setIdJogador(int idJogador) {
         this.idJogador = idJogador;
-    }
-
-    public String getNomeJogador() {
-        return nomeJogador;
     }
 
     public void setNomeJogador(String nomeJogador) {
         this.nomeJogador = nomeJogador;
     }
 
-    public Posicao getPosicao() {
-        return posicao;
-    }
-
     public void setPosicao(Posicao posicao) {
         this.posicao = posicao;
-    }
-
-    public int getNumCamisa() {
-        return numCamisa;
     }
 
     public void setNumCamisa(int numCamisa) {
@@ -39,9 +23,9 @@ public class Jogador {
     }
 
     public void imprimirJogador() {
-        System.out.println("idJogador: " + idJogador);
-        System.out.println("Nome: " + nomeJogador);
-        System.out.println("Posicao: " + posicao);
-        System.out.println("Numero da camisa: " + numCamisa);
+        System.out.println("idJogador: " + this.idJogador);
+        System.out.println("Nome: " + this.nomeJogador);
+        System.out.println("Posicao: " + this.posicao);
+        System.out.println("Numero da camisa: " + this.numCamisa);
     }
 }
