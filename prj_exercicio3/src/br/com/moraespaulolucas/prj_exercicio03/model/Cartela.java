@@ -13,12 +13,12 @@ public class Cartela {
 
     private int[][] valores = new int[size][size];
 
-    private Random random = new Random();
+    private
 
     // o método só recebe um array e não um vetor,
     // pois não há como os número se repetirem em diferentes linhas.
     // portanto, só preciso verificar se ele se repete na mesma linha
-    private boolean verificaNum(int num, int[] array) {
+    boolean verificaNum(int num, int[] array) {
         boolean r = false;
         int j;
         for (j = 0; j < array.length; j++) {
@@ -29,36 +29,39 @@ public class Cartela {
     }
 
     public void preencherCartela () {
-        for(this.i = 0; this.i < this.size; this.i++) {
-            for (this.j = 0; this.j < this.size; this.j++) {
+        int i, j, numTmp;
+        Random random = new Random();
+        for(i = 0; i < this.size; i++) {
+            for (j = 0; j < this.size; j++) {
 
                 // verifica se está no meio da cartela
-                if ((this.i == this.size / 2) && (this.j == this.size / 2))
+                if ((i == this.size / 2) && (j == this.size / 2))
                     continue;
 
                 // verifica se o numero ja existe
                 do{
-                    this.numTmp = this.inc + this.random.nextInt(range);
-                }while (this.verificaNum(this.numTmp, this.valores[i]));
+                    numTmp = this.inc + random.nextInt(this.range);
+                }while (this.verificaNum(numTmp, this.valores[i]));
 
                 // insere o valor na posição
-                this.valores[this.i][this.j] = this.numTmp;
+                this.valores[i][j] = numTmp;
             }
             this.inc += this.range;
         }
     }
 
     public void imprimirCartela() {
+        int i, j;
         System.out.println("Cartela");
-        for(this.i = 0; this.i<this.size; this.i++) {
+        for(i = 0; i<this.size; i++) {
             System.out.printf("{");
-            for (this.j = 0; this.j < this.size; this.j++) {
+            for (j = 0; j < this.size; j++) {
                 // verifica se está no meio da cartela
-                if ((this.i == this.size / 2) && (this.j == this.size / 2)) {
+                if ((i == this.size / 2) && (j == this.size / 2)) {
                     System.out.printf(" X");
                     continue;
                 }
-                System.out.printf(" %d", this.valores[this.i][this.j]);
+                System.out.printf(" %d", this.valores[i][j]);
             }
             System.out.println(" }");
         }

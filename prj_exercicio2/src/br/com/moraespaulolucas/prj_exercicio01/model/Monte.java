@@ -3,7 +3,6 @@ package br.com.moraespaulolucas.prj_exercicio01.model;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Random;
 
 public class Monte {
     private List<Pedra> monte = new ArrayList<>();
